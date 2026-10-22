@@ -1,0 +1,20 @@
+# Credentials and generated/private material
+.local/
+config/secrets/*
+!config/secrets/secrets.example.json
+!config/secrets/README.md
+.env
+.env.*
+*.local.json
+*.zip
+*.pem
+*.key
+*.p12
+*.jks
+*.log
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+dist/

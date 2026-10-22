@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "environment": "uat",
+  "status": "not_configured",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "catalogs": {
+    "bronze": "bronze",
+    "silver": "silver",
+    "gold": "gold"
+  },
+  "variables": {
+    "BUCKET_NAME": "",
+    "BUCKET_NAME1": "",
+    "HADOOP_AMS_URL": "",
+    "HADOOP_CAS_ENDPOINT": "",
+    "HADOOP_CPG_ENDPOINT": "",
+    "HIVEMETASTORE_HOST": "",
+    "HIVE_TRUSTSTORE_PATH": "",
+    "HRM_BASE_URL": "",
+    "S3_ENDPOINT": "",
+    "VLP_URL": "",
+    "WXD_HMS_USERNAME": "",
+    "WXD_INSTANCE_ID": ""
+  },
+  "source_options": {
+    "hrm": {
+      "HRM_PAGE_PARAM": "",
+      "HRM_SIZE_PARAM": ""
+    },
+    "vlp": {
+      "VLP_PAGE_SIZE": "20",
+      "VLP_MAX_PAGES": "100000",
+      "VLP_REQUESTS_PER_SECOND": "5",
+      "VLP_TIME_UNIT": "milliseconds"
+    }
+  },
+  "notes": [
+    "Supply this environment configuration; do not reuse DEV credentials or URLs implicitly."
+  ]
+}

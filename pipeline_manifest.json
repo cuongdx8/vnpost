@@ -1,0 +1,135 @@
+{
+  "manifest_version": 2,
+  "project": "VNPOST",
+  "updated_on": "2026-10-22",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "layout": "notebooks/<layer>/<source>/NB_<layer>.<source>.<object>.ipynb",
+  "notebooks": [
+    {
+      "layer": "landing",
+      "source": "hrm",
+      "object": "unit",
+      "path": "notebooks/landing/hrm/NB_landing.hrm.unit.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "85623a15a7b84f86be0da69e6577d0c53c76200bd913800711d2cf740233e299",
+      "code_cell_count": 10,
+      "baseline": {
+        "filename": "NB_landing.hrm.unit (3).ipynb",
+        "sha256": "18fd87085d97bdcf30b5cef3219b19eb96714e28c9a010bb1a6afb0b79474d10"
+      },
+      "depends_on": [],
+      "bronze_table": "bronze.hrm.unit",
+      "landing_prefix_template": "s3://landing-bucket/hrm/unit/YYYYMMDD/"
+    },
+    {
+      "layer": "landing",
+      "source": "hrm",
+      "object": "employee",
+      "path": "notebooks/landing/hrm/NB_landing.hrm.employee.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "8c674e867791d081561f17370903e7e22dbca85b53f33523734351ee75fa49de",
+      "code_cell_count": 10,
+      "baseline": {
+        "filename": "NB_landing.hrm.employee.ipynb",
+        "sha256": "debfa9e3b5749f91bf71ba03ffbeab1fd98989a69cc15bfc30f520880446ab9a"
+      },
+      "depends_on": [],
+      "bronze_table": "bronze.hrm.employee",
+      "landing_prefix_template": "s3://landing-bucket/hrm/employee/YYYYMMDD/"
+    },
+    {
+      "layer": "landing",
+      "source": "vlp",
+      "object": "order_detail",
+      "path": "notebooks/landing/vlp/NB_landing.vlp.order_detail.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "0aebe6c11e54835ef94446898ba0244144809c2e660f86a86f7a16240ac22209",
+      "code_cell_count": 11,
+      "baseline": {
+        "filename": "NB_landing.vlp.order_detail.ipynb",
+        "sha256": "2a68e5d6cb51cc0c59a4ba35caf4a6a86d6fc0c95224b952f5a4c20f67d52607"
+      },
+      "depends_on": [],
+      "bronze_table": "bronze.vlp.order_detail",
+      "landing_prefix_template": "s3://landing-bucket/vlp/order_detail/YYYYMMDD/"
+    },
+    {
+      "layer": "bronze",
+      "source": "hrm",
+      "object": "unit",
+      "path": "notebooks/bronze/hrm/NB_bronze.hrm.unit.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "b77325e39248fe95ec7fe628073c373ad17abd6648815b54b16670234a8bec8b",
+      "code_cell_count": 10,
+      "baseline": {
+        "filename": "NB_bronze.hrm.unit.ipynb",
+        "sha256": "d4a81d371c8148157a53c3637d41cb7099ac8f2de528b6ffd764b3c66c22e16e"
+      },
+      "depends_on": [
+        "notebooks/landing/hrm/NB_landing.hrm.unit.ipynb"
+      ],
+      "bronze_table": "bronze.hrm.unit",
+      "landing_prefix_template": "s3://landing-bucket/hrm/unit/YYYYMMDD/"
+    },
+    {
+      "layer": "bronze",
+      "source": "hrm",
+      "object": "employee",
+      "path": "notebooks/bronze/hrm/NB_bronze.hrm.employee.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "d2b85b0b1bda2231be692127ad094d59abd7bdde9d7d05cbbf3d8635e5d25bc6",
+      "code_cell_count": 10,
+      "baseline": {
+        "filename": "NB_bronze.hrm.employee.ipynb",
+        "sha256": "f264f3727a1bb10ef9a9318d936bbf902c4320377602b0e7b0dd041e4852d688"
+      },
+      "depends_on": [
+        "notebooks/landing/hrm/NB_landing.hrm.employee.ipynb"
+      ],
+      "bronze_table": "bronze.hrm.employee",
+      "landing_prefix_template": "s3://landing-bucket/hrm/employee/YYYYMMDD/"
+    },
+    {
+      "layer": "bronze",
+      "source": "vlp",
+      "object": "order_detail",
+      "path": "notebooks/bronze/vlp/NB_bronze.vlp.order_detail.ipynb",
+      "status": "implementation_present_runtime_unverified",
+      "sha256": "944d34958e6925c67be109d01f026cc4b58e0bee438012ca5f8c2c91c0eb82dd",
+      "code_cell_count": 10,
+      "baseline": {
+        "filename": "NB_bronze.vlp.order_detail.ipynb",
+        "sha256": "a1ed89dd6e21508a3de6adf0580d7c21dbfcb1c0dca40d7717ef6f813b00df84"
+      },
+      "depends_on": [
+        "notebooks/landing/vlp/NB_landing.vlp.order_detail.ipynb"
+      ],
+      "bronze_table": "bronze.vlp.order_detail",
+      "landing_prefix_template": "s3://landing-bucket/vlp/order_detail/YYYYMMDD/"
+    },
+    {
+      "layer": "gold",
+      "source": "cas_admin",
+      "object": "dim_org",
+      "path": "notebooks/gold/cas_admin/NB_gold.cas_admin.dim_org.draft.ipynb",
+      "status": "draft_review_required",
+      "sha256": "a265e08e607b84afe855a259a48bdbbe08ed086eb4213d3339085a688ef74bc4",
+      "code_cell_count": 14,
+      "baseline": {
+        "filename": "Pasted text.txt (CAS Admin SCD2)",
+        "sha256": "c7baf6c509712314a794af4c8f5dac822dc8fa8e716f5741a8033e79647b5fcc"
+      },
+      "depends_on": [],
+      "source_table": "silver.cas_admin.mcas_organization_standard",
+      "target_table": "gold.dwh.dim_org"
+    }
+  ],
+  "unimplemented": [
+    "silver/hrm",
+    "silver/vlp",
+    "gold/hrm",
+    "gold/vlp"
+  ],
+  "private_handoff": ".local/handoff/ (not tracked by Git)",
+  "verification_scope": "Configuration/source organization only. No actual API, S3, Spark or CP4D execution."
+}

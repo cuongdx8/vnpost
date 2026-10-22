@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "environment": "dev",
+  "status": "imported_existing_dev_config_not_revalidated",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "catalogs": {
+    "bronze": "bronze",
+    "silver": "silver",
+    "gold": "gold"
+  },
+  "variables": {
+    "BUCKET_NAME": "landing-bucket",
+    "BUCKET_NAME1": "raw-bucket",
+    "HADOOP_AMS_URL": "https://lhconsole-ams-svc.cpd-operand.svc.cluster.local:3333",
+    "HADOOP_CAS_ENDPOINT": "https://ibm-lh-lakehouse-cas-svc.cpd-operand.svc.cluster.local:8780/cas/v1/signature",
+    "HADOOP_CPG_ENDPOINT": "https://internal-nginx-svc.cpd-operand.svc.cluster.local:12443",
+    "HIVEMETASTORE_HOST": "https://ibm-lh-lakehouse-mds-thrift-svc.cpd-operand.svc.cluster.local:8381/mds/thrift",
+    "HIVE_TRUSTSTORE_PATH": "file:///opt/ibm/jdk/lib/security/cacerts",
+    "HRM_BASE_URL": "https://dev-hrm.vnpost.vn",
+    "S3_ENDPOINT": "http://dp-dev-sds-ces.dp.vnpost.vn:6001",
+    "VLP_URL": "https://uat-vlp-edi.vnpost.vn/api/unified",
+    "WXD_HMS_USERNAME": "cpadmin",
+    "WXD_INSTANCE_ID": "1788818121687098"
+  },
+  "source_options": {
+    "hrm": {
+      "HRM_PAGE_PARAM": "",
+      "HRM_SIZE_PARAM": ""
+    },
+    "vlp": {
+      "VLP_PAGE_SIZE": "20",
+      "VLP_MAX_PAGES": "100000",
+      "VLP_REQUESTS_PER_SECOND": "5",
+      "VLP_TIME_UNIT": "milliseconds"
+    }
+  },
+  "notes": [
+    "Current credentials are DEV according to the project owner.",
+    "VLP URL is preserved from supplied code; its hostname says uat. Confirm routing with the source owner before changing it."
+  ]
+}
